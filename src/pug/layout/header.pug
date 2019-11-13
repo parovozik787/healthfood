@@ -1,7 +1,11 @@
 header.header
     .container.flex
+        .burger
+            +closeBurger
+            +dotsBurger
         a.logo(href='#!')
-           +logo
+            +logowhite
+            +logo
         .share__block
             a(href='#0')
                 +facebook
@@ -15,7 +19,7 @@ header.header
                 +telegram
             a(href='#0')
                 +ok
-        ul.calculator__block
+        ul.calculator__menu
             li
                 a(href="#0").calculator__item
                     +header-icon1
@@ -49,6 +53,6 @@ header.header
                 a(href="#0") Витамины и полезные компоненты
             li
                 a(href="#0") Контакты
-        .search
+        button(type="submit").search
             +search
         input(type="search" placeholder="Поиск").search__inp

@@ -1,0 +1,26 @@
+.burger
+  display: none
+  @media #{$lgx}
+    display: block
+    width: 27px
+    height: 27px
+    border-radius: 50%
+    border: 2px solid #FFFFFF
+    position: relative
+    overflow: hidden
+.closeBurger
+  position: absolute
+  top: 50%
+  left: -50%
+  transform: translate(-50%, -50%)
+  transition: all .3s linear
+  .active &
+    left: 50%
+.dotsBurger
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  transition: all .3s linear
+  .active &
+    left: 150%

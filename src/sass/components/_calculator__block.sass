@@ -1,19 +1,28 @@
 .calculator
-  &__block
+  width: 100%
+  &__menu
     display: flex
     align-items: center
-    & li
-      margin-right: 30px
-      &:nth-child(2)
-        & p
-          max-width: 100px
-      &:nth-child(3)
-        & p
-          max-width: 129px
-      &:nth-child(4)
-        margin-right: 0
-        & p
-          max-width: 80px
+    @media #{$sm-min}
+      & li
+        margin-right: 30px
+        &:nth-child(2)
+          & p
+            max-width: 100px
+        &:nth-child(3)
+          & p
+            max-width: 129px
+        &:nth-child(4)
+          margin-right: 0
+          & p
+            max-width: 80px
+    @media #{$sm}
+      flex-direction: column
+      align-items: center
+      width: 100%
+      & li
+        width: 100%
+        border-bottom: 1px solid rgba(255, 255, 255, .25)
 
   &__item
     display: flex
@@ -21,14 +30,25 @@
     font-size: 14px
     line-height: 14px
     color: #22242E
-    & p
-      margin-left: 10px
-    &:hover
-      color: #71B35D
+    @media #{$lgx}
+      color: #FFFFFF
+      justify-content: center
+      padding: 15px 0
       & path
-        fill: #71B35D
+        fill: #FFFFFF
       li:last-child &
         & path
-          stroke: #71B35D
+          stroke: #FFFFFF
           fill: none
+    & p
+      margin-left: 10px
+    @media #{$lgx-min}
+      &:hover
+        color: #71B35D
+        & path
+          fill: #71B35D
+        li:last-child &
+          & path
+            stroke: #71B35D
+            fill: none
 

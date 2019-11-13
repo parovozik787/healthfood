@@ -4,13 +4,14 @@ body
 	font-weight: 400
 	background-color: #ffffff
 
-section,
+.header,
 .footer
+	padding: 0 15px
+
+section
 	padding-left: 15px
 	padding-right: 15px
 	padding-top: 30px
-
-section
 	position: relative
 	min-height: calc(100vh - var(--footer-height) - #{$header-height})
 
@@ -20,6 +21,7 @@ section
 	overflow: hidden
 	position: fixed
 .container
+	position: relative
 	width: 100%
 	max-width: $container
 	margin: 0 auto
@@ -33,4 +35,5 @@ section
 	align-items: center
 	justify-content: space-between
 	.header &
-		padding: 10px 0
+		@media #{$lgx-min}
+			padding: 10px 0
