@@ -4,8 +4,11 @@
     display: block
 #logowhite
   display: block
-  @media #{$lgx-min}
-    display: none
+  .header &
+    @media #{$lgx-min}
+      display: none
+  .footer &
+    margin-bottom: 20px
 
 .logo
   @media #{$lgx}

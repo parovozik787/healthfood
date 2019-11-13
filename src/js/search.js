@@ -1,4 +1,12 @@
 function search() {
-    const searchBtn = document.querySelector('.search__btn');
-    searchBtn.addEventListener('click', () => searchBtn.classList.toggle('search__btn--active'));
+    $('.search').click(function () {
+        if ($(window).width() < 1161) {
+            $('.search__inp').toggleClass('open').focus();
+        }
+        else {
+            $('.search__inp').slideToggle(function () {
+                $(this).focus();
+            })
+        }
+    })
 }

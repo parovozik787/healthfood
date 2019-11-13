@@ -1,12 +1,25 @@
 .share__block
-  & svg
+  & a:not(:last-child)
     margin-right: 10px
+  & svg
     border-radius: 50%
     overflow: hidden
     cursor: pointer
-    &:hover
-      background: linear-gradient(270deg, #8CCA7B 0%, #75B662 100%)
-      & circle
-        stroke: #8CCA7B
+    .footer &
       & path
-        fill: #FFFFFF
+        fill: #FFFFFF * .6
+      & circle
+        stroke: #FFFFFF * .6
+      &:hover
+        background: #F8D851
+        & circle
+          stroke: #F8D851
+        & path
+          fill: #000000
+    .header &
+      &:hover
+        background: linear-gradient(270deg, #8CCA7B 0%, #75B662 100%)
+        & circle
+          stroke: #8CCA7B
+        & path
+          fill: #FFFFFF
