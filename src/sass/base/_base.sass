@@ -12,6 +12,7 @@ section
 	padding-left: 15px
 	padding-right: 15px
 	padding-top: 30px
+	padding-bottom: 100px
 	position: relative
 	min-height: calc(100vh - var(--footer-height) - #{$header-height})
 
@@ -25,10 +26,24 @@ section
 	width: 100%
 	max-width: $container
 	margin: 0 auto
-.grid__container
+
+.first-screen
 	display: grid
-	grid-template-columns: 1fr 1fr 1fr 1fr
-	grid-gap: 30px
+	grid-template-columns: minmax(450px, 74.36%)  minmax(254px, 1fr)
+	grid-template-rows: 150px 150px 150px
+	grid-column-gap: 30px
+	grid-row-gap: 30px
+	position: relative
+	border-radius:
+	& .mpfs
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 9999
+
+
+
+
 .flex
 	display: flex
 	flex-direction: row
@@ -37,3 +52,10 @@ section
 	.header &
 		@media #{$lgx-min}
 			padding: 10px 0
+.mainArt
+	height: 100%
+	grid-column: 1
+	grid-row: 1/span 3
+	border-radius: 30px
+	overflow: hidden
+	position: relative

@@ -1,6 +1,7 @@
 $(document).ready(function() {
   burger();
   search();
+  slick();
 
   if ( $(window).width() < 1161) {
     const slider = document.querySelector('.calculator__menu');

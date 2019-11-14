@@ -1,11 +1,10 @@
 .article-block
   position: relative
-  //@media #{$sm-min}
-  //  margin-bottom: $side
-  //  margin-right: 0
-  //  margin-left: 0
-  //@media #{$lg-min}
-  //  margin-bottom: $side
+  height: 100%
+  border-radius: 20px
+  overflow: hidden
+  .mainArt &
+    border-radius: 0
 
 .image-link
   z-index: 1
@@ -17,23 +16,43 @@
 
 .article-link
   $font-size: 14px
-  $line-height: 1.29
-  $lines-to-show: 4
+  $line-height: 19px
+  $lines-to-show: 3
   -webkit-box-orient: vertical
   display: block // Fallback for non-webkit
   display: -webkit-box
-  max-height: $font-size * $line-height * $lines-to-show // Fallback for non-webkit
+  max-height: $line-height * $lines-to-show // Fallback for non-webkit
   font-size: $font-size
   line-height: $line-height
   -webkit-line-clamp: $lines-to-show
   overflow: hidden
   text-overflow: ellipsis
-  text-transform: uppercase
   font-weight: 700
+  color: #FFFFFF
+  margin-bottom: 12px
+  &:hover
+    color: #F8D851
+  .mainArt &
+    $font-size: 26px
+    $line-height: 33px
+    $lines-to-show: 2
+    -webkit-line-clamp: $lines-to-show
+    font-size: $font-size
+    line-height: $line-height
+    text-transform: uppercase
+    max-height: $line-height * $lines-to-show // Fallback for non-webkit
+    margin-bottom: 8px
+
 
 .article-img
-  position: relative
-  padding-top: 142%
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
   &::after
     position: absolute
     content: ''
@@ -43,7 +62,9 @@
     width: 100%
     height: 100%
     display: block
-    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 53.12%)
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+  & .cover-img
+    +coverImg
 
 .category-link
   background-color: $color-main
@@ -52,14 +73,18 @@
   font-size: 12px
   font-weight: 700
   margin-right: 20px
+.author-link
+  color: #FFFFFF
 
 .article-content
   z-index: 2
   position: absolute
   bottom: 0
   left: 0
-  padding: 0 20px 25px
+  padding: 0 20px 20px
   max-width: 100%
+  .mainArt &
+    padding: 0 40px 40px
 
 .article-body
   color: #6E7680
