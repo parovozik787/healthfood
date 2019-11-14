@@ -21,6 +21,8 @@
     font-size: 14px
     color: #22242E
     padding: 0 20px
+    @media #{$sm}
+      max-width: none
     @media #{$lgx}
       display: block
       top: 0
@@ -31,5 +33,3 @@
     &.open
       padding: 0 20px
       width: calc(100% - 77px)
-      @media #{$sm}
-        max-width: none

@@ -1,7 +1,9 @@
 section.main-page
     .container
         .first-screen
-            +mpfs
+            .mpfs__box
+                .title Популярные новости
+                +mpfs
             .mainArt
                 - for (let i = 0; i < 4; i++)
                     article.article-block
