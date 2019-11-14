@@ -2,24 +2,31 @@
   background: #0B0E14
   color: #FFFFFF
   font-size: 12px
-  padding-top: 70px
-  padding-bottom: 70px
+  padding: 70px 35px 20px
   & .container
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    @media #{$sm}
+      flex-direction: column
   &__block
     width: 100%
     display: flex
     flex-direction: column
-    &:nth-child(1)
-      max-width: 223px
-    &:nth-child(2)
-      max-width: 302px
-    &:nth-child(3)
-      max-width: 218px
-    &:nth-child(4)
-      max-width: 212px
+    margin-bottom: 50px
+    max-width: 50%
+    @media #{$sm}
+      max-width: none
+    @media #{$lgx-min}
+      &:nth-child(1)
+        max-width: 223px
+      &:nth-child(2)
+        max-width: 302px
+      &:nth-child(3)
+        max-width: 218px
+      &:nth-child(4)
+        max-width: 212px
+
   &__title
     font-size: 14px
     font-weight: 700
@@ -43,4 +50,8 @@
         margin-right: 30px
       &:nth-child(2)
         max-width: 129px
+    @media #{$lgx}
+      justify-content: flex-start
+    @media #{$sm}
+      flex-direction: column
 
