@@ -1,4 +1,6 @@
 .header
+  position: relative
+  z-index: 1000
   @media #{$lgx}
     background: linear-gradient(90deg, #8ECB7E -74.27%, #66AA52 100%)
     & .share__block
@@ -8,10 +10,11 @@
         height: 60px
 .subheader
   background: linear-gradient(90deg, #8ECB7E -74.27%, #66AA52 100%)
+  position: relative
+  z-index: 1000
   @media #{$lgx}
     display: none
     background: #8ECB7E
-    position: relative
     z-index: 1000
   & .container
     display: flex

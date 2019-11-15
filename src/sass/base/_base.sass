@@ -15,6 +15,9 @@ section
 	padding-bottom: 100px
 	position: relative
 	min-height: calc(100vh - var(--footer-height) - #{$header-height})
+	&.main-page
+		@media #{$sm}
+			padding-top: 0
 
 .menu-open
 	width: 100%
@@ -41,16 +44,31 @@ section
 		top: 0
 		left: 0
 		z-index: 110
+		pointer-events: none
+		@media #{$sm}
+			left: -15px
 		.title
 			position: absolute
 			top: 23px
 			left: 30px
 			max-width: 195px
 			z-index: 999
+			@media #{$sm}
+				top: 15px
+				left: 15px
 		& .mpfs
 			position: absolute
 			top: -25px
 			left: 0
+	@media #{$sm}
+		grid-template-columns: 1fr
+		grid-template-rows: 350px repeat(3, 200px)
+		grid-column-gap: 0
+		overflow: visible
+
+
+
+
 
 
 
@@ -73,3 +91,8 @@ section
 	border-radius: 30px
 	overflow: hidden
 	position: relative
+	@media #{$sm}
+		grid-row: 1
+		border-radius: 0
+		margin-left: -15px
+		margin-right: -15px

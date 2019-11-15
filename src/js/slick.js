@@ -7,5 +7,13 @@ function slick() {
     nextArrow: '<button class="slick-next" aria-label="Next" type="button"></button>',
     speed: 600,
     slidesToShow: 1,
+    responsive: [
+      { breakpoint: 767,
+        settings: {
+          arrows: false
+        }
+
+      }
+    ]
   });
 }

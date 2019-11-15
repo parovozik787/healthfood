@@ -42,6 +42,15 @@
     text-transform: uppercase
     max-height: $line-height * $lines-to-show // Fallback for non-webkit
     margin-bottom: 8px
+    @media #{$sm}
+      $font-size: 17px
+      $line-height: 21px
+      $lines-to-show: 3
+      -webkit-line-clamp: $lines-to-show
+      font-size: $font-size
+      line-height: $line-height
+      max-height: $line-height * $lines-to-show // Fallback for non-webkit
+
 
 
 .article-img
@@ -85,6 +94,8 @@
   max-width: 100%
   .mainArt &
     padding: 0 40px 40px
+    @media #{$sm}
+      padding: 0 15px 30px
 
 .article-body
   color: #6E7680
