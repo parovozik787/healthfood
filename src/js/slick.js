@@ -10,7 +10,9 @@ function slick() {
     responsive: [
       { breakpoint: 767,
         settings: {
-          arrows: false
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 5000
         }
 
       }
