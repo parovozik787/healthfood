@@ -1,0 +1,32 @@
+section.author-page
+    .container
+            ul.breadcrumbs
+                li
+                    a(href='#') Главная
+                li
+                    a(href='#') Новости
+                li
+                    a(href='#') Действительно ли мясо настолько вредно?
+    .grid__container
+        div
+            .author__block
+                .author__img
+                    img(src="/img/author.jpg")
+                div
+                    .title Евгений третяк
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            h2.title Популярные новости автора
+            .grid__block
+                - for (let i = 0; i < 9; i++)
+                    article.article-block
+                        a.image-link(href='selected.html')
+                        .article-img
+                            img.cover-img(src='/img/default.jpg', alt='', title='')
+                        .article-content
+                            h3: a.article-link(href='selected.html') Экономисты о новом налоге на IT-отрасль:  Добровольно в Украине такие вещи работать  не будут
+                            .article-description
+                                span.text-small 21.08.2019
+                                a.text-small(href='#') Евгений Третяк
+            include ../components/pagination
+        div
+            include ../components/sidebar

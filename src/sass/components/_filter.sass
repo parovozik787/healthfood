@@ -1,0 +1,42 @@
+.filter
+  display: flex
+  flex-direction: column
+  line-height: 31px
+  max-height: 31px
+  overflow: hidden
+  padding: 0 20px
+  width: 176px
+  background: rgb(255, 255, 255)
+  box-shadow: 0 2px 7px rgba(57, 57, 57, 0.15)
+  border-radius: 10px
+  position: relative
+  top: 0
+  right: 0
+  transition: max-height .3s ease-in-out, box-shadow .3s ease-in-out
+  z-index: 100
+  &.active
+    max-height: 62px
+    &:after
+      transform: rotateZ(180deg)
+  &:hover
+    cursor: pointer
+    box-shadow: 2px 4px 9px rgba(57, 57, 57, 0.2)
+  &:after
+    content: '▼'
+    font-size: 5px
+    line-height: 16px
+    position: absolute
+    top: 8px
+    right: 20px
+    transition: all .3s ease-in-out
+  &__item
+    line-height: 32px
+    min-height: 32px
+    order: 2
+    transition: all .3s ease-in-out
+    &--active
+      order: 1
+    &:hover
+      cursor: pointer
+      color: #009cf0
+

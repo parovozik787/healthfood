@@ -25,10 +25,18 @@
 
 .title
   font-size: 26px
-  line-height: 33px
+  line-height: 34px
   font-weight: 700
+  margin-bottom: 30px
   color: #22242E
   text-transform: uppercase
-  .new-page &
+  .selected-news &
     margin-top: 15px
-    margin-bottom: 30px
+  .author__block &
+    margin-bottom: 15px
+    text-align: center
+    @media #{$mdx-min}
+      text-align: left
+  &__box
+    display: flex
+    justify-content: space-between
