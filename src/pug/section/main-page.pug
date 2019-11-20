@@ -28,11 +28,16 @@ section.main-page
                             span.text-small 21.08.2019
                             a.text-small(href='#') Евгений Третяк
 section.useful
-    .container
+    .us-bg-top
+        +useful-bgtop
+    .us-bg-bot
+        +useful-bgbot
+    +useful
+    .grid__container
         div
             h2.title Полезные продукты
-            .useful__box
-                - for (let i = 0; i < 9; i++)
+            .grid__block
+                - for (let i = 0; i < 12; i++)
                     article.article-block
                         a.image-link(href='#')
                         .article-img
@@ -46,8 +51,21 @@ section.useful
                 a.btn.btn__white(href="#0") Показать еще
         div
             include ../components/sidebar
-            .banner-200
-
+            .banner
+                .banner-200
+                    span 200x200
+section.about-section
+    .grid__container
+        .about
+            .about__imgBox
+                img(src="/img/about-1.jpg")
+                img(src="/img/about-2.jpg")
+            .about__block
+                span#onas О нас
+                .title О нас
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                a.btn.btn__yellow Подробнее
+        include ../components/subscribe
 
 
 

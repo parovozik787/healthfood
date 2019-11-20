@@ -1,0 +1,58 @@
+.subscribe
+  background: #FFFFFF
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1)
+  border-radius: 40px
+  width: 100%
+  max-width: 548px
+  margin: 0 auto
+  &__header
+    position: relative
+    height: 120px
+    width: 100%
+    background: linear-gradient(32.42deg, #67AB53 5.12%, #A1DA93 150.9%)
+    border-radius: 40px 40px 0 0
+  &__block
+    padding: 40px 15px
+
+    .title
+      font-size: 17px
+      line-height: 17px
+      text-align: center
+    & input
+      width: 100%
+      color: #22242E
+      padding: 20px 15px
+      background-color: #FFFFFF
+      border: 1px solid #EAECF0
+      border-radius: 30px
+      margin: 20px auto
+      &::placeholder
+        font-style: italic
+      &::-ms-input-placeholder
+        font-style: italic
+      &:-ms-input-placeholder
+        font-style: italic
+      &::-webkit-input-placeholder
+        font-style: italic
+
+[class*='sub-']
+  position: absolute
+.sub
+  &-icon-1
+    bottom: 10px
+    left: 15px
+  &-icon-2
+    bottom: 25px
+    right: 30px
+  &-icon-3
+    top: -7px
+    right: -13px
+  &-icon-4
+    top: -26px
+    left: 50%
+    transform: translateX(-50%)
+  &-icon-5
+    top: -26px
+    left: -44px
+    @media #{$sm}
+      display: none

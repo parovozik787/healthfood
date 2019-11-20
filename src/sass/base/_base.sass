@@ -11,8 +11,8 @@ body
 section
 	padding-left: 15px
 	padding-right: 15px
-	padding-top: 30px
-	padding-bottom: 100px
+	padding-top: 50px
+	padding-bottom: 50px
 	position: relative
 	min-height: calc(100vh - var(--footer-height) - #{$header-height})
 	&.main-page
@@ -28,6 +28,45 @@ section
     @media #{$lgx-min}
       padding: 10px 0
 
+.grid__container
+	position: relative
+	width: 100%
+	max-width: $container
+	margin: 0 auto
+	display: grid
+	grid-template-columns: 1fr
+	grid-column-gap: 0
+	grid-row-gap: 50px
+	@media #{$sm-min}
+		grid-template-columns: minmax(450px, 74.36%)  minmax(254px, 1fr)
+		grid-column-gap: 30px
+	& > div
+		position: relative
+	.about-section &
+		@media #{$sm-min}
+			grid-column-gap: 0
+			grid-template-columns: 1fr
+		@media #{$mdx-min}
+			grid-column-gap: 30px
+			grid-template-columns: minmax(450px, 74.36%)  minmax(254px, 1fr)
+
+
+.grid__block
+	position: relative
+	width: 100%
+	display: grid
+	grid-template-columns: 1fr
+	grid-auto-rows: 200px
+	grid-column-gap: 30px
+	grid-row-gap: 20px
+	@media #{$sm-min}
+		grid-row-gap: 30px
+		grid-template-columns: 1fr 1fr
+		grid-auto-rows: 190px
+	@media #{$mdx-min}
+		grid-auto-rows: 260px
+		grid-template-columns: 1fr 1fr 1fr
+
 
 .menu-open
 	width: 100%
@@ -35,7 +74,6 @@ section
 	overflow: hidden
 	position: fixed
 .container
-	position: relative
 	width: 100%
 	max-width: $container
 	margin: 0 auto
