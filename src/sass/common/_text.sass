@@ -12,8 +12,16 @@
       transform: translateY(-50%)
       width: 3px
       height: 3px
-      background: rgba(255, 255, 255, .8)
+      background-color: rgba(255, 255, 255, .8)
       border-radius: 50%
+  .new-page &
+    color: #22242E
+    &:after
+      background-color: rgba(0, 0, 0, .8)
+    &:hover:not(:first-child)
+      color: #67AB53
+
+
 
 .title
   font-size: 26px
@@ -21,4 +29,6 @@
   font-weight: 700
   color: #22242E
   text-transform: uppercase
-
+  .new-page &
+    margin-top: 15px
+    margin-bottom: 30px
