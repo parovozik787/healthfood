@@ -50,6 +50,10 @@ section
 		@media #{$mdx-min}
 			grid-column-gap: 30px
 			grid-template-columns: minmax(450px, 74.36%)  minmax(254px, 1fr)
+	@media #{$sm}
+		&.column-reverse
+			& > div:nth-child(1)
+				grid-row: 2
 
 
 .grid__block
@@ -71,6 +75,7 @@ section
 	&.column-4
 		@media #{$md-min}
 			grid-template-columns: 1fr 1fr 1fr 1fr
+
 
 .menu-open
 	width: 100%

@@ -1,0 +1,56 @@
+.accordion
+  background-color: #FFFFFF
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15)
+  @media #{$sm-min}
+    border-radius: 40px
+  &__box
+    display: none
+    @media #{$sm-min}
+      display: block
+    & > li
+      border-top: 1px solid #EAECF0
+  &__title
+    color: #71B35D
+    padding: 30px 20px 20px
+    line-height: 26px
+    margin-bottom: 0
+    position: relative
+
+  &__item
+    padding: 15px 20px
+    line-height: 14px
+    font-style: italic
+    color: #22242E
+    cursor: pointer
+    &:hover
+      color: #67AB53
+    &:last-child
+      @media #{$sm-min}
+        padding-bottom: 30px
+    &.haveChild
+      position: relative
+      &:after
+        content: '⌄'
+        position: absolute
+        top: calc(50% - 1px)
+        transform: translateY(-50%)
+        font-style: normal
+        font-size: 25px
+        right: 20px
+        transition: all .3s linear
+    &.active
+      &:after
+        transform: translateY(-50%) rotate(-180deg)
+        top: calc(50% + 4px)
+
+
+
+.arrow
+  position: absolute
+  top: 34px
+  right: 20px
+  transition: all .4s linear
+  .active &
+    transform: rotate(180deg)
+  @media #{$sm-min}
+    display: none

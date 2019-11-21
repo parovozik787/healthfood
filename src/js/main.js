@@ -2,6 +2,7 @@ $(document).ready(function() {
   burger();
   search();
   slick();
+  accordion();
   if ( $(window).width() < 1161) {
     const slider = document.querySelector('.calculator__menu');
     slider.remove();
