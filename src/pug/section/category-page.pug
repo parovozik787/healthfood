@@ -1,0 +1,23 @@
+section.category-page
+    .container
+            ul.breadcrumbs
+                li
+                    a(href='#') Главная
+                li
+                    a(href='#') Новости
+                li
+                    a(href='#') Действительно ли мясо настолько вредно?
+    .container
+        .title Полезные продукты
+        .grid__block.column-4
+            - for (let i = 0; i < 12; i++)
+                article.article-block
+                    a.image-link(href='selected.html')
+                    .article-img
+                        img.cover-img(src='/img/default.jpg', alt='', title='')
+                    .article-content
+                        h3: a.article-link(href='selected.html') Экономисты о новом налоге на IT-отрасль:  Добровольно в Украине такие вещи работать  не будут
+                        .article-description
+                            span.text-small 21.08.2019
+                            a.text-small(href='#') Евгений Третяк
+        include ../components/pagination

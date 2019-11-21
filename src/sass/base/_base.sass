@@ -11,11 +11,12 @@ body
 section
 	padding-left: 15px
 	padding-right: 15px
-	padding-top: 50px
+	padding-top: 20px
 	padding-bottom: 50px
 	position: relative
 	min-height: calc(100vh - var(--footer-height) - #{$header-height})
 	&.main-page
+		padding-top: 30px
 		@media #{$sm}
 			padding-top: 0
 
@@ -67,7 +68,9 @@ section
 	@media #{$mdx-min}
 		grid-auto-rows: 260px
 		grid-template-columns: 1fr 1fr 1fr
-
+	&.column-4
+		@media #{$md-min}
+			grid-template-columns: 1fr 1fr 1fr 1fr
 
 .menu-open
 	width: 100%
