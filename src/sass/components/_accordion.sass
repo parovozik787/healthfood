@@ -1,14 +1,24 @@
 .accordion
   background-color: #FFFFFF
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15)
+  overflow: hidden
   @media #{$sm-min}
     border-radius: 40px
+  &__subBox
+    display: none
+    overflow: hidden
+    padding: 20px 40px
+    color: #FFFFFF
+    background-color: #8CC97C
   &__box
     display: none
     @media #{$sm-min}
       display: block
     & > li
       border-top: 1px solid #EAECF0
+      &:last-child
+        @media #{$sm-min}
+          padding-bottom: 30px
   &__title
     color: #71B35D
     padding: 30px 20px 20px
@@ -22,11 +32,15 @@
     font-style: italic
     color: #22242E
     cursor: pointer
+    display: block
     &:hover
       color: #67AB53
     &:last-child
       @media #{$sm-min}
         padding-bottom: 30px
+    .themes &
+      font-weight: 700
+      font-style: normal
     &.haveChild
       position: relative
       &:after
@@ -42,8 +56,10 @@
       &:after
         transform: translateY(-50%) rotate(-180deg)
         top: calc(50% + 4px)
-
-
+  &__subItem
+    font-weight: 700
+    &:not(:last-child)
+      margin-bottom: 8px
 
 .arrow
   position: absolute

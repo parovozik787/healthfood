@@ -95,7 +95,14 @@
   margin-right: 20px
 
 .author-link
-  color: #FFFFFF
+  &:hover
+    color: #F8D851
+    .sidebar &
+      text-decoration: underline
+      .useful &
+        color: #71B35D
+        text-decoration: none
+
 
 .article-content
   z-index: 2

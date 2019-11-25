@@ -10,10 +10,12 @@
       height: auto
       position: absolute
       @media #{$sm}
-        max-width: 40%
+        max-width: 35%
       &:nth-child(1)
         left: 0
         top: -30px
+        @media #{$sm}
+          top: -10px
       &:nth-child(2)
         position: relative
         z-index: 100
@@ -22,6 +24,8 @@
       &:nth-child(3)
         right: 0
         top: -30px
+        @media #{$sm}
+          top: -10px
   .title
     text-align: center
     margin-bottom: 30px

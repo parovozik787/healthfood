@@ -14,12 +14,14 @@ section
 	padding-top: 20px
 	padding-bottom: 50px
 	position: relative
-	min-height: calc(100vh - var(--footer-height) - #{$header-height})
+	//min-height: calc(100vh - var(--footer-height) - #{$header-height})
 	&.main-page
 		padding-top: 30px
 		@media #{$sm}
 			padding-top: 0
-
+	&.about-section
+		@media #{$md}
+			padding-top: 50px
 .flex
   display: flex
   flex-direction: row
@@ -43,13 +45,6 @@ section
 		grid-column-gap: 30px
 	& > div
 		position: relative
-	.about-section &
-		@media #{$sm-min}
-			grid-column-gap: 0
-			grid-template-columns: 1fr
-		@media #{$mdx-min}
-			grid-column-gap: 30px
-			grid-template-columns: minmax(450px, 74.36%)  minmax(254px, 1fr)
 	@media #{$sm}
 		&.column-reverse
 			& > div:nth-child(1)
