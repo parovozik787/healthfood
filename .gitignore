@@ -1,5 +1,6 @@
 /node_modules
 /.DS_Store
 /build
-/src/libs
+/src/libs/**/
 /.idea
+package-lock.json
