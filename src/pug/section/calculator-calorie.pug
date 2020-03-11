@@ -1,0 +1,176 @@
+section
+  .container
+              ul.breadcrumbs
+                  li
+                      a(href='#') Главная
+                  li
+                      a(href='#') Калькулятор расхода калорий
+  .container
+    h2.title Калькулятор расхода калорий
+
+    script(src='./libs/calculator-calorie.js')
+
+    .calculator.calculator-calorie
+
+      form.calculator-box(onsubmit='return KcalCalc(this);', method='post')
+
+        .calculator-row
+
+          .calculator-item
+            h3.calculator-title Деятельность:
+            .calculator-select
+              select(name='act')
+                option(value='3.2') Работа по дому
+                option(value='3.4') Легкая уборка
+                option(value='1.1') Приготовление еды
+                option(value='1.3') Разговор во время еды
+                option(value='1.1') Разговор по телефону
+                option(value='0.9') Заправление постели
+                option(value='2.1') Покупка продуктов
+                option(value='2.9') Читска ковров пылесосом
+                option(value='4') Мытье окон
+                option(value='3.9') Чистка сантехники
+                option(value='3.8') Чистка стекол, зеркал
+                option(value='1.66') Вязание
+                option(value='2.41') Подметание
+                option(value='2.06') Мытьё посуды
+                option(value='1.4') Прием пищи
+                option(value='1.7') Письмо сидя
+                option(value='2.5') Вытирание пыли
+                option(value='1.9') Глажение белья
+                option(value='1.59') Ручное шитьё
+                option(value='1.5') Чтение вслух
+                option(value='1.5') Громкое чтение
+                option(value='2.0') Набор текста на клавиатуре в быстром темпе
+                option(value='1.74') Пение
+                option(value='0.9') Сон
+                option(value='1.1') Лежание без сна
+                option(value='1.43') Сидение
+                option(value='1.5') Стояние
+                option(value='7.4') Подъем по лестнице/ степ
+                option(value='3') Шопинг
+                option(value='1.3') Персональная гигиена
+                option(value='1.3') Принятие душа
+                option(value='0.7') Принятие ванны
+                option(value='2') Укладка волос
+                option(value='1.69') Одевание и раздевание
+                option(value='0.7') Игра в карты
+                option(value='0.7') Игра в настольные игры
+                option(value='0.7') Поездка на автомобили (пассажир)
+                option(value='2') Поездка на мотоцикле
+                option(value='1.4') Вождение автомобиля
+                option(value='2.1') Секс активный
+                option(value='1.1') Секс (пасивный)
+                option(value='0.9') Французский поцелуй
+                option(value='0.4') Легкий поцелуй
+                option(value='6') Стриптиз
+                option(value='10.1') Строительство снеговиков, игры со снегом
+                option(value='1.4') Пешая прогулка с семьей
+                option(value='0.7') Сидение с ребенком на коленях
+                option(value='2') Игры с ребенком сидя
+                option(value='2') Кормление и одевание ребенка
+                option(value='2.7') Купание ребенка
+                option(value='2.7') Перенос маленьких детей на руках
+                option(value='2.2') Прогулка с коляской
+                option(value='3.6') Прогулка с детьми в парке
+                option(value='5.4') Игры с ребенком (высокая активность)
+                option(value='4') Игра с детьми с ходьбой и бегом
+                option(value='4') Игры с ребенком (умеренная активность)
+                option(value='2.9') Прогулка с собакой
+                option(value='1.7') Рыбалка
+                option(value='1.4') Игра на гитаре сидя
+                option(value='2.9') Игра на гитаре стоя
+                option(value='2.2') Игра на пианино
+                option(value='1.1') Занятия в аудитории, урок
+                option(value='1.3') Полет на самолете
+                option(value='1.2') Работа в офисе
+                option(value='1.9') Работа в саду
+                option(value='3.3') Прополка сорняков
+                option(value='4.3') Выдергивание прошлогодней травы
+                option(value='3.3') Прополка новых сорняков
+                option(value='2.9') Стрижка газона
+                option(value='4.2') Работа массажистом
+                option(value='4.2') Зарядка средней интенсивности
+                option(value='3.6') Фигурное катание
+                option(value='3.4') Занятие гимнастикой (легкие)
+                option(value='6.5') Занятие гимнастикой (энергичные)
+                option(value='10.7') Занятия балетом
+                option(value='7.4') Быстрые танцы
+                option(value='6.9') Танцы в ритме диско
+                option(value='2.9') Танцы медленные (вальс, танго)
+                option(value='3.9') Бальные танцы
+                option(value='4.6') Современные танцы
+                option(value='12.9') Бег вверх по ступенькам
+                option(value='8.6') Бег по пересеченной местности
+                option(value='7.7') Бег вверх и вниз по ступенькам
+                option(value='8.4') Бег, 10,4 км/ч
+                option(value='11') Бег, 12 км/ч
+                option(value='14') Бег, 16 км/ч
+                option(value='8.14') Медленный бег, 8 км/ч
+                option(value='7.14') Плавание в медленном темпе
+                option(value='7.0') Медленное плавание кролем
+                option(value='5.6') Медленное плавание брассом
+                option(value='7.6') Аквааэробика
+                option(value='7') Хоккей на траве
+                option(value='6.5') Альпинизм
+                option(value='5.2') Занятия аэробикой
+                option(value='4.8') Бадминтон
+                option(value='4.8') Баскетбол
+                option(value='3.6') Боулинг
+                option(value='5.4') Езда на велосипеде, 16 км/ч
+                option(value='2.86') Ходьба, 4 км/ч
+                option(value='4.28') Ходьба, 6 км/ч
+                option(value='5.4') Ходьба в гору (уклон 15%, 3,8 км/ч)
+                option(value='9.28') Ходьба на лыжах
+                option(value='5.9') Спортивная хотьба
+                option(value='4.0') Вскапывание земли
+                option(value='7.4') Занятия на эллиптическом тренажере
+                option(value='6.4') Футбол
+                option(value='4.4') Футбол, нападение
+                option(value='3.2') Гольф
+                option(value='4.0') Гимнастика
+                option(value='4.4') Хоккей
+                option(value='4.0') Фехтование
+                option(value='3.2') Гандбол
+                option(value='5.6') Верховая езда рысью
+                option(value='3.2') Дзюдо
+                option(value='4.0') Гребля медленная
+                option(value='6.4') Гребля спортивная
+                option(value='3.2') Катание на коньках
+                option(value='4.2') Катание на роликах
+                option(value='7.4') Катание на лыжах по ровной местности
+                option(value='5.2') Спуск с горы на лыжах
+                option(value='5.6') Прыжки через скакалку
+                option(value='1.8') Растяжка
+                option(value='4.8') Настольный теннис
+                option(value='5.8') Теннис
+                option(value='4.8') Волейбол
+                option(value='3.8') Тренировка с отягощениями
+                option(value='6.0') Аштанга-йога
+                option(value='3.2') Статическая йога
+                option(value='1.5') Теоретическое преподавание
+                option(value='5.1') Дайвинг
+                option(value='5.1') Водные лыжи
+
+        .calculator-row
+
+          .calculator-item
+            h3.calculator-title Продолжительность активности:
+            .calculator-wrap
+              input.inp(maxlength='3', name='times', type='text')
+              span.calculator-height мин.
+
+        .calculator-row
+
+          .calculator-item
+            h3.calculator-title Ваш вec:
+            .calculator-wrap
+              input.inp(maxlength='3', name='ves', type='text')
+              span.calculator-height кг.
+
+        button.calculator-btn(type='submit') Вычислить
+
+        .calculator-calorie-results
+          input(name='kcal', type='text')
+          span калорий затрачено
+    
